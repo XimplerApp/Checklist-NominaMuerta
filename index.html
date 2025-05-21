@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Esto pasa en tu equipo? – Síntomas de Nómina Muerta</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: auto; background-color: #f9f9f9; }
+    h2 { color: #222; }
+    .category { margin-top: 30px; }
+    .category h3 { color: #333; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+    label { display: block; margin: 8px 0; }
+    .result { font-weight: bold; font-size: 1.2em; margin-top: 30px; }
+    button { margin-top: 20px; padding: 10px 20px; font-size: 1em; }
+  </style>
+</head>
+<body>
+  <h2>¿Esto pasa en tu equipo?</h2>
+  <p>Marca todos los síntomas que hayas observado recientemente en tu área o equipo de trabajo. Al final recibirás un estimado del nivel de riesgo por Nómina Muerta.</p>
+
+  <form id="symptomForm">
+    <div class="category">
+      <h3>Flujo operativo ineficiente</h3>
+      <label><input type="checkbox" value="1"> Esperar la firma física de un documento cuando podría hacerse digitalmente.</label>
+      <label><input type="checkbox" value="1"> Enviar el mismo archivo a varias personas sin claridad de quién debe aprobarlo.</label>
+      <label><input type="checkbox" value="1"> Duplicar datos en diferentes plataformas porque no están integradas.</label>
+    </div>
+
+    <div class="category">
+      <h3>Comunicación dispersa</h3>
+      <label><input type="checkbox" value="1"> Responder correos con copia a todos “por si acaso”.</label>
+      <label><input type="checkbox" value="1"> Mensajes urgentes que se pierden en grupos de WhatsApp con ruido.</label>
+      <label><input type="checkbox" value="1"> Decisiones que se toman por teléfono pero no se documentan.</label>
+    </div>
+
+    <div class="category">
+      <h3>Gestión de tareas y supervisión</h3>
+      <label><input type="checkbox" value="1"> Seguimiento de tareas basado en memoria o intuición.</label>
+      <label><input type="checkbox" value="1"> Supervisión constante del jefe por falta de visibilidad.</label>
+      <label><input type="checkbox" value="1"> Correcciones constantes por instrucciones poco claras.</label>
+    </div>
+
+    <div class="category">
+      <h3>Trabajo en equipo mal coordinado</h3>
+      <label><input type="checkbox" value="1"> Equipos trabajando en paralelo sin saberlo.</label>
+      <label><input type="checkbox" value="1"> Proyectos sin un responsable claro.</label>
+      <label><input type="checkbox" value="1"> Reuniones sin acuerdos ni responsables asignados.</label>
+    </div>
+
+    <div class="category">
+      <h3>Desalineación estratégica</h3>
+      <label><input type="checkbox" value="1"> Actividades que siguen aunque ya no son relevantes.</label>
+      <label><input type="checkbox" value="1"> Medición de indicadores que no impactan los resultados.</label>
+      <label><input type="checkbox" value="1"> Cambios implementados sin explicación ni acompañamiento.</label>
+    </div>
+
+    <div class="category">
+      <h3>Desgaste cognitivo o emocional</h3>
+      <label><input type="checkbox" value="1"> Buscar instrucciones en múltiples fuentes dispersas.</label>
+      <label><input type="checkbox" value="1"> Cambiar de tarea constantemente sin cerrar ninguna.</label>
+      <label><input type="checkbox" value="1"> Repetir explicaciones por falta de canal centralizado.</label>
+    </div>
+
+    <div class="category">
+      <h3>Variables adicionales frecuentes</h3>
+      <label><input type="checkbox" value="1"> Buscar por 20 minutos un correo con un archivo clave entre hilos confusos y reenvíos desordenados.</label>
+      <label><input type="checkbox" value="1"> Pedir una autorización en WhatsApp que se pierde entre memes y otros mensajes.</label>
+      <label><input type="checkbox" value="1"> Reuniones sin responsables ni seguimiento. Todo se discute de nuevo cada semana.</label>
+      <label><input type="checkbox" value="1"> Esperar validación de otra área sin tablero de trazabilidad. El proceso se congela.</label>
+      <label><input type="checkbox" value="1"> Enviar el mismo reporte a dos jefes distintos. Seguimiento y validación duplicados.</label>
+      <label><input type="checkbox" value="1"> Dar seguimiento por email a tareas urgentes que se pierden entre cadenas extensas.</label>
+    </div>
+
+    <button type="button" onclick="calculateResult()">Calcular Resultados</button>
+    <p class="result" id="resultText"></p>
+  </form>
+
+  <script>
+    function calculateResult() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      let total = 0;
+      checkboxes.forEach(cb => { if (cb.checked) total += 1; });
+
+      let interpretation = "";
+      if (total <= 3) {
+        interpretation = "Nivel Bajo: Riesgo limitado. Felicidades, tu equipo mantiene buena higiene operativa. Sigue fortaleciendo las prácticas efectivas.";
+      } else if (total <= 6) {
+        interpretation = "Nivel Moderado: Hay algunos focos de Nómina Muerta. Revisa los síntomas seleccionados y aplica acciones correctivas simples.";
+      } else if (total <= 10) {
+        interpretation = "Nivel Alto: Tu equipo tiene varios patrones de ineficiencia. Es recomendable aplicar el reto completo de diagnóstico y rediseño.";
+      } else {
+        interpretation = "Nivel Crítico: Se detecta una alta concentración de síntomas. Se requiere intervención estructural urgente en prioridades, procesos y herramientas.";
+      }
+
+      document.getElementById("resultText").textContent = `Síntomas detectados: ${total}
+${interpretation}`;
+    }
+  </script>
+</body>
+</html>
