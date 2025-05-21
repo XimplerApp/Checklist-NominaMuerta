@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>¿Estás pagando por trabajo que no genera resultados?</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: auto; background-color: #f9f9f9; }
+    h2 { color: #222; }
+    .category { margin-top: 30px; }
+    .category h3 { color: #333; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+    label { display: block; margin: 8px 0; }
+    .result { font-weight: bold; font-size: 1.2em; margin-top: 30px; }
+    button { margin-top: 20px; padding: 10px 20px; font-size: 1em; }
+  </style>
+</head>
+<body>
+<h2>¿Estás pagando por trabajo que no genera resultados?</h2>
+<p>Este no es un formulario simbólico. Es una alarma silenciosa.<br/>
+  Si marcas más de 6 síntomas, no es tu equipo el que está fallando.<br/>
+<strong>Es tu modelo operativo el que está drenando talento, tiempo y dinero.</strong><br/>
+  Contéstalo tú mismo. Y actúa antes de que el costo se vuelva irreversible.</p>
+<form id="symptomForm">
+<div class="category"><h3>Flujo operativo ineficiente</h3><label><input type="checkbox" value="1"/> ¿Hay procesos detenidos solo por una firma física que podrías automatizar?</label><label><input type="checkbox" value="1"/> ¿Se reenvía el mismo archivo a varias personas sin saber quién debe decidir?</label><label><input type="checkbox" value="1"/> ¿Tu equipo repite información porque las plataformas no están integradas?</label><label><input type="checkbox" value="1"/> ¿Hay tareas críticas detenidas porque dependen de una persona específica y no del sistema?</label><label><input type="checkbox" value="1"/> ¿El mismo dato se captura o corrige más de una vez porque nadie cerró bien el flujo?</label></div><div class="category"><h3>Comunicación dispersa</h3><label><input type="checkbox" value="1"/> ¿El equipo manda correos con copia a todos solo para protegerse?</label><label><input type="checkbox" value="1"/> ¿Lo urgente se pierde entre stickers, memes y mensajes mezclados en WhatsApp?</label><label><input type="checkbox" value="1"/> ¿Toman decisiones por teléfono que luego nadie documenta ni respalda?</label><label><input type="checkbox" value="1"/> ¿Tu equipo necesita revisar más de 3 canales distintos para entender qué debe hacer hoy?</label><label><input type="checkbox" value="1"/> ¿La mayoría de los acuerdos clave se pierden entre conversaciones informales?</label></div><div class="category"><h3>Gestión de tareas y supervisión</h3><label><input type="checkbox" value="1"/> ¿Se da seguimiento a tareas por memoria o intuición, sin sistema visible?</label><label><input type="checkbox" value="1"/> ¿Los líderes necesitan supervisar todo porque no hay visibilidad de avance?</label><label><input type="checkbox" value="1"/> ¿Se repiten errores por instrucciones vagas o mal entendidas desde el inicio?</label><label><input type="checkbox" value="1"/> ¿Hay tareas que se siguen haciendo solo porque “así se ha hecho siempre”?</label><label><input type="checkbox" value="1"/> ¿Las prioridades cambian sin que el equipo se entere hasta que ya es tarde?</label></div><div class="category"><h3>Trabajo en equipo mal coordinado</h3><label><input type="checkbox" value="1"/> ¿Hay personas trabajando en lo mismo sin saber que otros ya lo están haciendo?</label><label><input type="checkbox" value="1"/> ¿Existen proyectos sin un responsable claro y definido?</label><label><input type="checkbox" value="1"/> ¿Tienen reuniones donde no se asignan responsables ni fechas claras?</label><label><input type="checkbox" value="1"/> ¿Tienes reuniones de “coordinación” que no coordinan nada?</label><label><input type="checkbox" value="1"/> ¿El trabajo pasa de un área a otra sin contexto, como si fueran silos aislados?</label></div><div class="category"><h3>Desalineación estratégica</h3><label><input type="checkbox" value="1"/> ¿Sigues destinando tiempo a tareas que ya no aportan valor real?</label><label><input type="checkbox" value="1"/> ¿Estás midiendo cosas que no cambian los resultados clave del negocio?</label><label><input type="checkbox" value="1"/> ¿Has hecho cambios que el equipo no entiende ni aplica correctamente?</label><label><input type="checkbox" value="1"/> ¿Tu equipo sabe cómo su trabajo impacta los objetivos reales del negocio?</label><label><input type="checkbox" value="1"/> ¿Toman decisiones operativas sin tener clara la estrategia general?</label></div><div class="category"><h3>Desgaste cognitivo o emocional</h3><label><input type="checkbox" value="1"/> ¿El equipo busca instrucciones en múltiples canales dispersos cada vez?</label><label><input type="checkbox" value="1"/> ¿Saltan de tarea en tarea sin cerrar nada a tiempo ni lograr foco?</label><label><input type="checkbox" value="1"/> ¿Repetís las mismas explicaciones porque no hay un canal unificado?</label><label><input type="checkbox" value="1"/> ¿Tu equipo termina el día agotado pero sin sensación de avance?</label><label><input type="checkbox" value="1"/> ¿Sientes que están ocupados todo el tiempo, pero no sabes si están siendo productivos?</label></div><div class="category"><h3>Variables adicionales frecuentes</h3><label><input type="checkbox" value="1"/> ¿Buscas durante 20 minutos un correo importante entre hilos confusos?</label><label><input type="checkbox" value="1"/> ¿Pides autorizaciones urgentes por WhatsApp que luego nadie encuentra?</label><label><input type="checkbox" value="1"/> ¿Revisan lo mismo en cada reunión porque nadie hace seguimiento real?</label><label><input type="checkbox" value="1"/> ¿El proceso se congela esperando validación sin trazabilidad entre áreas?</label><label><input type="checkbox" value="1"/> ¿Mandas el mismo reporte a varios jefes, duplicando tiempo y esfuerzo?</label><label><input type="checkbox" value="1"/> ¿Das seguimiento por email a temas urgentes que se entierran en la bandeja?</label><label><input type="checkbox" value="1"/> ¿Has normalizado la espera como parte del proceso “natural”?</label><label><input type="checkbox" value="1"/> ¿Reinician tareas porque no quedó registro de lo avanzado antes?</label><label><input type="checkbox" value="1"/> ¿Confías más en preguntar otra vez que en revisar el sistema o plataforma?</label></div><button onclick="calculateResult()" type="button">🔍 Evaluar Riesgo Operativo</button><p class="result" id="resultText"></p></form>
+
+
+<script>
+  function calculateResult() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let total = 0;
+    checkboxes.forEach(cb => { if (cb.checked) total += 1; });
+
+    let interpretation = "";
+    if (total <= 3) {
+      interpretation = `🟢 Nivel Bajo (0–3 síntomas):
+Tu operación muestra señales de eficiencia y control. 
+Pero cuidado: algunos de los síntomas marcados podrían escalar si no se atienden. 
+La excelencia no se mantiene sola: se diseña, se mide y se refuerza todos los días.`;
+    } else if (total <= 6) {
+      interpretation = `🟡 Nivel Moderado (4–6 síntomas):
+Estás en la zona donde la Nómina Muerta comienza a camuflarse como “operación normal”.
+Esto genera desgaste silencioso, decisiones lentas y un liderazgo que corrige más de lo que transforma.
+Rediseñar ahora evitará que el problema se convierta en cultura.`;
+    } else if (total <= 10) {
+      interpretation = `🔴 Nivel Alto (7–10 síntomas):
+Estás pagando cada mes por trabajo que no produce resultados reales.
+Hay una estructura operativa que ya no responde a las exigencias del negocio.
+Si no rediseñas procesos, roles y flujos ahora, el costo se irá directo a tu margen, tu reputación y tu talento clave.`;
+    } else {
+      interpretation = `🚨 Nivel Crítico (11+ síntomas):
+Esto ya no es un tema de eficiencia. Es un problema de liderazgo y sostenibilidad.
+Estás operando con una carga invisible que frena resultados, diluye talento y multiplica el esfuerzo sin impacto.
+No necesitas más esfuerzo. Necesitas un rediseño urgente del sistema que sostiene (o sabotea) tu operación. 
+Posponerlo solo profundiza el deterioro. ¿Estás listo para liderar el cambio o vas a seguir normalizando el caos?`;
+    }
+
+    document.getElementById("resultText").textContent = `Síntomas detectados: ${total}\n\n${interpretation}`;
+  }
+</script>
+</body>
+</html>
